@@ -1,7 +1,8 @@
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
-
+// Maximum sum circular subarray + kadane for min sum subarray
+// https://leetcode.com/problems/maximum-sum-circular-subarray/discuss/178422/One-Pass
 int KadaneAlgorithm(vector<int> arr)
 {
     int n=arr.size();
