@@ -1,0 +1,15 @@
+class Solution {
+public:
+    void solve(TreeNode *node,vector<int> &res, int level){
+        if(!node) return ;
+        if(level==res.size()) {res.push_back(node->val);}
+        solve(node->right,res,level+1);
+        solve(node->left,res,level+1);
+    }
+    vector<int> rightSideView(TreeNode* root) {
+        if(root==NULL) return {};
+        vector<int> res;
+        solve(root,res,0);
+        return res;
+    }
+};
